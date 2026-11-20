@@ -23,7 +23,7 @@ Hoy el sitio usa `rsepriv@gmail.com` (se conservó). Cuando tengas correo propio
 datos estructurados (arriba), bloque Contacto, pie de página (y el `mailto:`).
 
 ## 4. Revisar antes de publicar
-- Los textos de tecnología (monitorista con IA, Talkio Torre, radios Talkio, custodia con GPS): confirma que cada frase es cierta para lo que vendes hoy.
+- Los textos de tecnología (monitorista con IA, Talkio Torre, Talkio, custodia con GPS): confirma que cada frase es cierta para lo que vendes hoy.
 - El "Aviso de ejemplo" de la sección Tecnología es un ejemplo inventado, marcado así en la página. Si prefieres uno con una captura real (sin nombre de cliente), dímelo.
 - Cifras (15 años, +200 guardias, 150+ clientes, 98 %, 96 %, 100 %, 89 %, 0 incidentes sin atender) tal como las diste.
 - Año del pie: 2026.

@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
 <link rel="apple-touch-icon" href="img/icono-160.png">
 <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/estilo.css?v=9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,8 +49,8 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custodia de mercancía" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monitoreo y CCTV" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monitoreo con cámaras e inteligencia artificial" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talkio Torre, panel de control de cámaras, radios y alertas" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Radios Talkio con grabación y botón SOS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talkio Torre, software de videovigilancia todo en uno: cámaras, radios y alertas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talkio, software de comunicación por radio con grabación y botón SOS" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custodia de carga con GPS en vivo" } }
     ]
   }
@@ -73,7 +73,16 @@
     </a>
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="#servicios">Guardias</a>
+      <div class="desp" id="desp">
+        <button class="desp-btn" id="desp-btn" type="button" aria-expanded="false" aria-controls="desp-lista">Servicios</button>
+        <div class="desp-lista" id="desp-lista">
+          <a href="servicios.html">Ver todos los servicios</a>
+          <a href="servicios.html#guardias">Guardias y vigilancia</a>
+          <a href="servicios.html#camaras">Cámaras con IA</a>
+          <a href="servicios.html#radios">Consola y panel de control para radios</a>
+          <a href="servicios.html#custodia">Custodia y GPS</a>
+        </div>
+      </div>
       <a href="#tecnologia">Tecnología</a>
       <a href="#porque">Por qué RPS</a>
       <a href="#clientes">Clientes</a>
@@ -148,12 +157,12 @@
         <li class="fila">
           <span class="n">05</span><h3>Custodia de mercancía</h3>
           <p>Acompañamiento y vigilancia mientras su mercancía, sus valores o su carga de alto riesgo viajan o esperan en bodega, por rutas de todo el país.</p>
-          <a class="enlace" href="#contacto" data-servicio="Custodia de mercancía">Cotizar custodia</a>
+          <a class="enlace" href="servicios.html#custodia">Ver custodia y GPS</a>
         </li>
         <li class="fila">
           <span class="n">06</span><h3>Monitoreo y CCTV</h3>
           <p>Supervisión de sus cámaras de seguridad, revisión de imágenes y control de acceso electrónico.</p>
-          <a class="enlace" href="#tecnologia">Ver monitoreo con inteligencia artificial</a>
+          <a class="enlace" href="servicios.html#camaras">Ver monitoreo con inteligencia artificial</a>
         </li>
       </ol>
     </div>
@@ -173,20 +182,20 @@
       <article class="tec">
         <span class="etiqueta">Cámaras</span>
         <h3>Monitorista virtual con inteligencia artificial</h3>
-        <p>Una inteligencia artificial recorre sus cámaras durante la noche, ronda tras ronda. Si ve algo sospechoso, le avisa por Telegram con la foto.</p>
+        <p>Una inteligencia artificial recorre sus cámaras durante la noche, ronda tras ronda. Si ve algo sospechoso, le llega una notificación con la foto y, si es grave, puede llamar al encargado.</p>
         <p>Usted decide en un toque: es conocido, llamar a RPS u otra foto. Si es grave y nadie contesta en 5 minutos, avisamos a nuestros supervisores.</p>
       </article>
       <article class="tec">
-        <span class="etiqueta">Panel único</span>
+        <span class="etiqueta">Software de videovigilancia</span>
         <h3>Talkio Torre</h3>
-        <p>Sus cámaras, sus radios, las alertas SOS y el mapa en una sola pantalla, desde la computadora o el celular.</p>
+        <p>Cámaras, radios, alertas SOS y mapa en un solo software, desde la computadora o el celular. Lo usamos en RPS y también lo ofrecemos a otras empresas, aunque no contraten nuestros guardias.</p>
         <p>Cada persona entra con su usuario, su clave y un código de seguridad, y solo ve lo que le corresponde.</p>
       </article>
       <article class="tec">
         <span class="etiqueta">Comunicación</span>
-        <h3>Radios Talkio</h3>
-        <p>Radios que graban todo lo que se habla y tienen botón SOS: si un guardia pide ayuda, suena la alarma en la central y llega el aviso al instante.</p>
-        <p>Funcionan con datos móviles, sin antenas propias.</p>
+        <h3>Talkio, comunicación por radio</h3>
+        <p>Software para que su personal se comunique por radio con datos móviles. Graba todo lo que se habla y tiene botón SOS: si alguien pide ayuda, suena la alarma en la central.</p>
+        <p>No necesita antenas propias.</p>
       </article>
       <article class="tec">
         <span class="etiqueta">Carga en ruta</span>
@@ -196,7 +205,7 @@
     </div>
 
     <div class="tec-pie">
-      <div class="aviso" role="img" aria-label="Ejemplo de aviso que llega por Telegram: nivel sospechoso, cámara 4 de la bodega norte a las 02:14, con los botones Es conocido, Llamar a RPS y Otra foto">
+      <div class="aviso" role="img" aria-label="Ejemplo de notificación que llega al celular: nivel sospechoso, cámara 4 de la bodega norte a las 02:14, con los botones Es conocido, Llamar a RPS y Otra foto">
         <div class="aviso-cab"><span>Aviso de ejemplo</span><span>02:14</span></div>
         <span class="aviso-nivel">Sospechoso</span>
         <strong>Cámara 4 · Bodega norte</strong>
@@ -215,6 +224,42 @@
       </div>
     </div>
     <p style="margin-top:36px"><a class="btn btn-amarillo" href="#contacto" data-servicio="Monitoreo con cámaras e inteligencia artificial">Pedir una demostración</a></p>
+  </div>
+</section>
+
+<!-- ============ CUSTODIA DE CARGA ============ -->
+<section id="custodia">
+  <div class="wrap">
+    <div class="cab-sec">
+      <p class="etiqueta">Custodia de carga</p>
+      <h2>Su carga llega sin novedad, y usted lo ve en el camino</h2>
+      <p class="bajada">Camionetas de RPS acompañan su contenedor o su mercancía, con permiso para custodia de cargas críticas. Cubrimos la ruta que usted necesite, de cualquier origen a cualquier destino del país.</p>
+    </div>
+    <div class="serv-grid">
+      <!-- FOTO PENDIENTE: img/camionetas-custodia.jpg (4:5, 1000 x 1250 px) -->
+      <div class="foto p45">
+        <img src="img/camionetas-custodia.jpg" width="1000" height="1250" alt="Camionetas de custodia de carga de RPS" loading="lazy" onerror="this.remove()">
+      </div>
+      <ol class="filas">
+        <li class="fila">
+          <span class="n">01</span><h3>Escolta en ruta</h3>
+          <p>Camionetas 4x4 con custodios que acompañan la carga de origen a destino y regresan a base.</p>
+        </li>
+        <li class="fila">
+          <span class="n">02</span><h3>Seguimiento en mapa</h3>
+          <p>Siga el viaje con GPS en un mapa, con alertas si la carga sale de la ruta prevista.</p>
+        </li>
+        <li class="fila">
+          <span class="n">03</span><h3>Foto del sello en cada punto</h3>
+          <p>En la carga, en las paradas y en la entrega recibe una notificación con la foto del sello, para respaldar que la carga no fue abierta.</p>
+        </li>
+        <li class="fila">
+          <span class="n">04</span><h3>Informe del viaje</h3>
+          <p>Al terminar: ruta, horas, fotos y novedades en un solo documento, útil para su auditoría, su aseguradora o su certificación BASC.</p>
+          <a class="enlace" href="#contacto" data-servicio="Custodia con GPS en vivo">Cotizar una custodia</a>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -334,8 +379,8 @@
               </optgroup>
               <optgroup label="Tecnología">
                 <option>Monitoreo con cámaras e inteligencia artificial</option>
-                <option>Talkio Torre (panel de control)</option>
-                <option>Radios Talkio</option>
+                <option>Talkio Torre (videovigilancia todo en uno)</option>
+                <option>Talkio (comunicación por radio)</option>
                 <option>Custodia con GPS en vivo</option>
               </optgroup>
               <option>Consulta general</option>
@@ -376,7 +421,7 @@
       <span><b>RPS SEGURIDAD FÍSICA</b></span>
     </a>
     <nav aria-label="Pie de página">
-      <a href="#servicios">Guardias</a>
+      <a href="servicios.html">Servicios</a>
       <a href="#tecnologia">Tecnología</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
@@ -391,6 +436,6 @@
 </a>
 </aside>
 
-<script src="js/sitio.js" defer></script>
+<script src="js/sitio.js?v=3" defer></script>
 </body>
 </html>

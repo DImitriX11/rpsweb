@@ -21,6 +21,26 @@
     });
   }
 
+  /* Desplegable de Servicios */
+  var desp = document.getElementById("desp");
+  var despBtn = document.getElementById("desp-btn");
+  function despCerrar() {
+    if (!desp) return;
+    desp.classList.remove("abierto");
+    despBtn.setAttribute("aria-expanded", "false");
+  }
+  if (desp && despBtn) {
+    despBtn.addEventListener("click", function () {
+      var abierto = desp.classList.toggle("abierto");
+      despBtn.setAttribute("aria-expanded", abierto ? "true" : "false");
+    });
+    desp.addEventListener("click", function (e) { if (e.target.closest(".desp-lista a")) despCerrar(); });
+    document.addEventListener("click", function (e) { if (!desp.contains(e.target)) despCerrar(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && desp.classList.contains("abierto")) { despCerrar(); despBtn.focus(); }
+    });
+  }
+
   /* Los enlaces "Cotizar ..." dejan elegido el servicio en el formulario */
   var servicio = document.getElementById("cf-servicio");
   document.addEventListener("click", function (e) {
